@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html class='no-js'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE:edge' http-equiv='X-UA-Compatible'>
+    <title>辅助决策软件</title>
+    <meta content='机械臂显示教学之轨迹编辑器' name='description'>
+    <meta content='示教, 轨迹, 编辑, three.js' name='keywords'>
+    <meta content='width:device-width, initial-scale:1, maximum-scale:1, user-scalable:no' name='viewport'>
+    <!-- Set render engine for 360 browser -->
+    <meta content='webkit' name='renderer'>
+    <link href='assets/css/amazeui.min.css' rel='stylesheet'>
+    <link href='assets/core.css' rel='stylesheet'>
+    <!--[if lt IE 9]>
+      <script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js'></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class='am-topbar am-topbar-fixed-top'>
+      <h1 class='am-topbar-brand'>
+        <a href='#'>辅助决策软件</a>
+      </h1>
+      <div class='am-topbar-left'>
+        <ul class='am-nav am-nav-pills am-topbar-nav'>
+		    <li class="am-dropdown" data-am-dropdown>
+				<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+				舱室查看 <span class="am-icon-caret-down"></span>
+				</a>
+				<ul class="am-dropdown-content">
+				<li class="am-dropdown-header">请选择查看舱室</li>
+				<li><a href='javascript:;' id='cabin1-view'>舱室1</a></li>
+				<li><a href='javascript:;' id='cabin2-view'>舱室2</a></li>
+				<li><a href='javascript:;' id='cabin3-view'>舱室3</a></li>
+				</ul>
+			</li>
+			<li class="am-dropdown" data-am-dropdown>
+				<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+				舱室灭火预案 <span class="am-icon-caret-down"></span>
+				</a>
+				<ul class="am-dropdown-content">
+				<li class="am-dropdown-header">请选择查看舱室</li>
+				<li><a href="#">舱室1</a></li>
+				<li><a href="#">舱室2</a></li>
+				<li><a href="#">舱室3</a></li>
+				</ul>
+			</li>
+			<li class="am-dropdown" data-am-dropdown>
+				<a class="am-dropdown-toggle" data-am-dropdown-toggle href="javascript:;">
+				舱室浸水预案 <span class="am-icon-caret-down"></span>
+				</a>
+				<ul class="am-dropdown-content">
+				<li class="am-dropdown-header">请选择查看舱室</li>
+				<li><a href="#">舱室1</a></li>
+				<li><a href="#">舱室2</a></li>
+				<li><a href="#">舱室3</a></li>
+				</ul>
+			</li>
+        </ul>
+      </div>
+      <div class='am-topbar-right'>
+        <ul class='am-nav am-nav-pills am-topbar-nav'>
+          <li class='am-dropdown' data-am-dropdown>
+            <a class='am-dropdown-toggle' data-am-dropdown-toggle href='javascript:;'>
+              <span class='am-icon-gear'></span>
+            </a>
+            <ul class='am-dropdown-content'>
+              <li>
+                <a href='javascript:;' id='stats-trigger'>显示计算统计</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div id='stats' style='display: none;'></div>
+  </body>
+</html>
+<script src='libs/jquery.min.js'></script>
+<script src='libs/amazeui.min.js'></script>
+<script src='libs/three.js'></script>
+<script src='libs/stats.min.js'></script>
+<script src='libs/TrackballControls.js'></script>
+<script src='libs/OBJLoader.js'></script>
+<script src='libs/MTLLoader.js'></script>
+
+
+
+<script src='assets/core.js'></script>
