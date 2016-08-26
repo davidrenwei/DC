@@ -4,12 +4,12 @@
     <meta charset='utf-8'>
     <meta content='IE:edge' http-equiv='X-UA-Compatible'>
     <title>辅助决策软件</title>
-    <meta content='机械臂显示教学之轨迹编辑器' name='description'>
-    <meta content='示教, 轨迹, 编辑, three.js' name='keywords'>
+    <meta content='辅助决策软件' name='description'>
+    <meta content='辅助决策软件, three.js' name='keywords'>
     <meta content='width:device-width, initial-scale:1, maximum-scale:1, user-scalable:no' name='viewport'>
     <!-- Set render engine for 360 browser -->
     <meta content='webkit' name='renderer'>
-    <link href='assets/css/amazeui.min.css' rel='stylesheet'>
+    <link href='assets/css/amazeui.css' rel='stylesheet'>
     <link href='assets/core.css' rel='stylesheet'>
     <!--[if lt IE 9]>
       <script src='//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js'></script>
@@ -27,7 +27,7 @@
 				舱室查看 <span class="am-icon-caret-down"></span>
 				</a>
 				<ul class="am-dropdown-content">
-				<li class="am-dropdown-header">请选择查看舱室</li>
+				<li class="am-dropdown-header">请选择舱室</li>
 				<li><a href='javascript:;' id='cabin1-view'>舱室1</a></li>
 				<li><a href='javascript:;' id='cabin2-view'>舱室2</a></li>
 				<li><a href='javascript:;' id='cabin3-view'>舱室3</a></li>
@@ -38,10 +38,10 @@
 				舱室灭火预案 <span class="am-icon-caret-down"></span>
 				</a>
 				<ul class="am-dropdown-content">
-				<li class="am-dropdown-header">请选择查看舱室</li>
-				<li><a href="#">舱室1</a></li>
-				<li><a href="#">舱室2</a></li>
-				<li><a href="#">舱室3</a></li>
+				<li class="am-dropdown-header">请选择舱室</li>
+				<li><a href='javascript:;' id='fireplan1'>舱室1</a></li>
+				<li><a href='javascript:;' id='fireplan2'>舱室2</a></li>
+				<li><a href='javascript:;' id='fireplan3'>舱室3</a></li>
 				</ul>
 			</li>
 			<li class="am-dropdown" data-am-dropdown>
@@ -49,10 +49,10 @@
 				舱室浸水预案 <span class="am-icon-caret-down"></span>
 				</a>
 				<ul class="am-dropdown-content">
-				<li class="am-dropdown-header">请选择查看舱室</li>
-				<li><a href="#">舱室1</a></li>
-				<li><a href="#">舱室2</a></li>
-				<li><a href="#">舱室3</a></li>
+				<li class="am-dropdown-header">请选择舱室</li>
+				<li><a href='javascript:;' id='waterplan1'>舱室1</a></li>
+				<li><a href='javascript:;' id='waterplan2'>舱室2</a></li>
+				<li><a href='javascript:;' id='waterplan3'>舱室3</a></li>
 				</ul>
 			</li>
         </ul>
@@ -65,18 +65,65 @@
             </a>
             <ul class='am-dropdown-content'>
               <li>
-                <a href='javascript:;' id='stats-trigger'>显示计算统计</a>
+                <a href='javascript:;' id='stats-trigger'>开启统计</a>
+				<a href='javascript:;' id='fullscreen'>开启全屏显示</a>
               </li>
             </ul>
           </li>
         </ul>
       </div>
     </header>
+	
     <div id='stats' style='display: none;'></div>
+
+<div id="offcanvas_fireplan1" class="am-offcanvas">
+  <div class="am-offcanvas-bar">
+    <div class="am-offcanvas-content">
+	<p style="font-family:KaiTi_GB2312;font-weight: bold; font-size:x-large; text-align:center">舱室1灭火预案</p>
+     <table class="am-table am-table-bordered">
+    <thead>
+        <tr>
+            <th>项目</th>
+            <th>内容</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>断电</td>
+            <td>关灯，关灯，关灯，关灯</td>
+          
+        </tr>
+        <tr>
+            <td>断油</td>
+            <td>断油，断油，断油，断油</td>
+            
+        </tr>
+        <tr>
+            <td>相邻舱室</td>
+            <td>舱室1，舱室2，舱室3</td>
+            
+        </tr>
+        <tr>
+            <td>灭火动作</td>
+            <td>大声喊着火了，组织灭火。</td>
+            
+        </tr>
+    </tbody>
+</table>
+    </div>
+  </div>
+</div>
+
+
+
+<!--button class="am-btn am-btn-primary doc-oc-js" data-rel="open">打开侧边栏</button-->
+<!--button class="am-btn am-btn-primary doc-oc-js" data-rel="close">关闭侧边栏</button-->
+
+
   </body>
 </html>
 <script src='libs/jquery.min.js'></script>
-<script src='libs/amazeui.min.js'></script>
+<script src='assets/js/amazeui.js'></script>
 <script src='libs/three.js'></script>
 <script src='libs/stats.min.js'></script>
 <script src='libs/TrackballControls.js'></script>
