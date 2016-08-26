@@ -110,7 +110,7 @@ function onWindowResize() {
 
 	windowHalfX = window.innerWidth / 2;
 	windowHalfY = window.innerHeight / 2;
-	camera.aspect = window.innerWidth / window.innerHeight;
+	camera.aspect = (window.innerWidth/1.5) / (window.innerHeight-$('header').height() - 8);
 	camera.updateProjectionMatrix();
  	renderer.setSize( window.innerWidth/1.5, window.innerHeight-$('header').height() - 8 );
 }
@@ -122,11 +122,40 @@ $(document).on("ready", function() {
   //$('#data-importer').on('change', importData);
   
   $('#cabin1-view').on('click', function() {
+	  $("#table1").show();
  //   alert(scene.position);
  //    alert('camera.position.x='+camera.position.x+';camera.position.y='+camera.position.y+';camera.position.z='+camera.position.z+';');
 	 //alert('position.x='+camera.position.x+';position.y='+camera.position.y+';position.z='+camera.position.z+';'+'rotation.x='+camera.rotation.x+';rotation.y='+camera.rotation.y+';rotation.z='+camera.rotation.z+';');
-     alert(camera.lookAt);
+     //alert(camera.lookAt);
   });
+   $('#cabin2-view').on('click', function() {
+	  $("#table1").hide();
+ //   alert(scene.position);
+ //    alert('camera.position.x='+camera.position.x+';camera.position.y='+camera.position.y+';camera.position.z='+camera.position.z+';');
+	 //alert('position.x='+camera.position.x+';position.y='+camera.position.y+';position.z='+camera.position.z+';'+'rotation.x='+camera.rotation.x+';rotation.y='+camera.rotation.y+';rotation.z='+camera.rotation.z+';');
+     //alert(camera.lookAt);
+  });
+  $('#fullscreen').on('click', function () {
+    
+	if ($.AMUI.fullscreen.isFullscreen) {
+		 $('#fullscreen').text('开启全屏显示');
+	}
+	else{
+		 $('#fullscreen').text('关闭全屏显示');
+	}
+    $.AMUI.fullscreen.toggle();
+  });
+
+    $('#fireplan1').on('click', function() {
+	  $('#offcanvas_fireplan1').offCanvas('open')
+    });
+
+    $myOc.on('open.offcanvas.amui', function() {
+      console.log(id + ' 打开了。');
+    }).on('close.offcanvas.amui', function() {
+      console.log(id + ' 关闭了。');
+    });
+
   return $('#stats-trigger').on('click', function() {
     if (stats.state) {
       stats.stop();
@@ -136,4 +165,5 @@ $(document).on("ready", function() {
       return $('#stats-trigger').text('关闭统计');
     }
   });
+  
 });

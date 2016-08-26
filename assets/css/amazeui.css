@@ -9374,7 +9374,7 @@ TODO:
   bottom: 0;
   left: 0;
   z-index: 1090;
-  background: rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0);
 }
 .am-offcanvas.am-active {
   display: block;
@@ -9396,13 +9396,13 @@ TODO:
 /* Sub-object .@{ns}offcanvas-bar */
 .am-offcanvas-bar {
   position: fixed;
-  top: 0;
+  top: 60px;
   bottom: 0;
-  left: 0;
-  z-index: 1091;
-  width: 270px;
+  right: 0;
+  z-index: 0;
+  width: 550px;
   max-width: 100%;
-  background: #333;
+  background: #FFF;
   overflow-y: auto;
   /* scrollable */
   -webkit-overflow-scrolling: touch;
@@ -9411,9 +9411,9 @@ TODO:
   transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
 }
 .am-offcanvas-bar:after {
   content: "";
@@ -9444,7 +9444,7 @@ TODO:
 }
 .am-offcanvas-content {
   padding: 15px;
-  color: #999;
+  color: #000;
 }
 .am-offcanvas-content a {
   color: #ccc;
